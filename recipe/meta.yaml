@@ -12,7 +12,10 @@ source:
 
 build:
   number: 2
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - rm src/spavro/fast_binary.c     # [unix]
+    - del src\\spavro\\fast_binary.c  # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
