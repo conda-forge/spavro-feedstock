@@ -11,8 +11,11 @@ source:
   sha256: ae8053305e7209c1e280ac1471198bd5dc5a5ea4f0a89e20d93513a5c2446693
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
+  script:
+    - rm src/spavro/fast_binary.c     # [unix]
+    - del src\\spavro\\fast_binary.c  # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
