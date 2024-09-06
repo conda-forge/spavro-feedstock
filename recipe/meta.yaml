@@ -11,7 +11,7 @@ source:
   sha256: 133fea8e876d01ac8c5195ca9a2ff15b3cfde99f32204f2443a8654309be6f25
 
 build:
-  number: 0
+  number: 1
   script:
     - rm src/spavro/fast_binary.c     # [unix]
     - del src\\spavro\\fast_binary.c  # [win]
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - pip
