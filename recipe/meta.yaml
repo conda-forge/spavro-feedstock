@@ -1,5 +1,5 @@
 {% set name = "spavro" %}
-{% set version = "1.1.26" %}
+{% set version = "1.1.27" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 133fea8e876d01ac8c5195ca9a2ff15b3cfde99f32204f2443a8654309be6f25
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 77a800153f7db2181a0fbd7f1b2b23fec1436c67b5cd4e982b39911693f96cad
 
 build:
-  number: 1
+  number: 0
   script:
     - rm src/spavro/fast_binary.c     # [unix]
     - del src\\spavro\\fast_binary.c  # [win]
