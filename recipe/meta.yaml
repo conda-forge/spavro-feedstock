@@ -11,7 +11,7 @@ source:
   sha256: 77a800153f7db2181a0fbd7f1b2b23fec1436c67b5cd4e982b39911693f96cad
 
 build:
-  number: 0
+  number: 1
   script:
     - rm src/spavro/fast_binary.c     # [unix]
     - del src\\spavro\\fast_binary.c  # [win]
